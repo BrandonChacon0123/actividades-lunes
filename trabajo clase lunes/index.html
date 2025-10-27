@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Bulma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+
+    <div id="estudios">
+        <ul>
+            <li>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est eligendi praesentium harum minus. 
+                    Esse eligendi iusto necessitatibus enim error a accusantium ipsum consectetur consequatur, impedit atque, itaque nostrum.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat mollitia doloribus dolor ducimus ex ullam id quod, eos in voluptatem vitae laborum incidunt quidem officia officiis fugiat ratione repudiandae aspernatur.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Página</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#estudios">Estudios</a></li>
+        </ul>
+    </nav>
+
+    <div class="formulario">
+        <form action="" method="post">
+            <label for="Nombre">Nombre:</label>
+            <input class="input is-success" type="text" name="Nombre" id="Nombre" required>
+            <br>
+
+            <label for="Email">Email:</label>
+            <input class="input is-success" type="email" name="Email" id="Email" placeholder="Ingrese su correo ej: micorreoes@gmail.com">   
+            <br>
+
+            <label for="Password">Contraseña:</label>
+            <input class="input is-danger" type="password" name="Password" id="Password" placeholder="Contraseña">
+            <br>
+
+            <label for="Date">Fecha:</label>
+            <input class="input is-success" type="date" name="Date" id="Date">
+            <br>
+
+            <button class="button is-success" type="submit" disabled>Enviar</button>
+            <button class="button is-danger" type="reset">Vaciar</button>
+        </form>
+    </div>
+
+    <!-- Si quieres usar un input de rango -->
+    <div class="section">
+        <label for="rangeInput">Valor:</label>
+        <input type="range" id="rangeInput" min="0" max="100" value="50">
+        <span id="rangeValue">50</span>
+    </div>
+
+    <script>
+        // Corrección: paréntesis y llaves correctamente colocados
+        const rangeInput = document.getElementById("rangeInput");
+        const rangeValue = document.getElementById("rangeValue");
+
+        if (rangeInput && rangeValue) {
+            rangeInput.addEventListener("input", function() {
+                rangeValue.textContent = this.value;
+            });
+        }
+    </script>
+
+</body>
+</html>
